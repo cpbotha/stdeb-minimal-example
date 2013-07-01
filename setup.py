@@ -4,7 +4,7 @@ from nvpy import nvpy
 
 setup(
     name = "myscript",
-    version = "1.0",
+    version = "1.1",
     author = "Charl P. Botha",
     author_email = "cpbotha@vxlabs.com",
     description = "Demo of packaging a Python script as DEB",
@@ -14,6 +14,9 @@ setup(
     entry_points = {
         'console_scripts' : ['myscript = myscript.myscript:main']
     },
+    data_files = [
+        ('share/applications/', ['vxlabs-myscript.desktop'])
+        ],
     classifiers=[
         "License :: OSI Approved :: BSD License",
     ],
